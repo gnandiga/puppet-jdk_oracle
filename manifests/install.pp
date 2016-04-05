@@ -12,8 +12,8 @@ define jdk_oracle::install(
   $ensure         = 'installed'
   ) {
 
-  $default_8_update = '11'
-  $default_8_build  = '12'
+  $default_8_update = '77'
+  $default_8_build  = '03'
   $default_7_update = '67'
   $default_7_build  = '01'
   $default_6_update = '45'
