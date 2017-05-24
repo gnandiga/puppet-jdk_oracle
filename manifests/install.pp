@@ -12,8 +12,9 @@ define jdk_oracle::install(
   $ensure         = 'installed'
   ) {
 
-  $default_8_update = '101'
-  $default_8_build  = '13'
+  $default_8_update = '131'
+  $default_8_build  = '11'
+  $default_8_url_part_1  ='d54c1d3a095b4ff2b6607d096fa80163'
   $default_7_update = '67'
   $default_7_build  = '01'
   $default_6_update = '45'
@@ -41,7 +42,7 @@ define jdk_oracle::install(
         } else {
           $version_b = $default_8_build
         }
-        $javaDownloadURI = "http://download.oracle.com/otn-pub/java/jdk/${version}u${version_u}-b${version_b}/jdk-${version}u${version_u}-linux-${plat_filename}.tar.gz"
+        $javaDownloadURI = "http://download.oracle.com/otn-pub/java/jdk/${version}u${version_u}-b${version_b}/$default_8_url_part_1/jdk-${version}u${version_u}-linux-${plat_filename}.tar.gz"
         $java_home = "${install_dir}/jdk1.${version}.0_${version_u}"
         $jceDownloadURI = 'http://download.oracle.com/otn-pub/java/jce/8/jce_policy-8.zip'
       }
